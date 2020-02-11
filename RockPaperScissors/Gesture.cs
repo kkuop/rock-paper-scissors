@@ -9,7 +9,7 @@ namespace RockPaperScissors
     class Gesture
     {
         //member vars
-
+        public List<string> listOfGestures;
         //constructor
         public Gesture()
         {

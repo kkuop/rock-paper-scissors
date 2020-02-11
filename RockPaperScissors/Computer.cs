@@ -11,7 +11,10 @@ namespace RockPaperScissors
         //member vars
 
         //constructor
-
+        public Computer()
+        {
+            
+        }
         //methods
     }
 }

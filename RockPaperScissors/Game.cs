@@ -8,7 +8,7 @@ namespace RockPaperScissors
 {
     class Game
     {
-        public void newGame()
+        public void NewGame()
         {
             //logic goes here
         }

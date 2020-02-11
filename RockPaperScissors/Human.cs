@@ -11,7 +11,11 @@ namespace RockPaperScissors
         //member vars
 
         //constructor
+        public Human()
+        {
 
+        }
         //methods
+        
     }
 }

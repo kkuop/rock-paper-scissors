@@ -11,7 +11,7 @@ namespace RockPaperScissors
         static void Main(string[] args)
         {
             Game newGame = new Game();
-            newGame.newGame();
+            newGame.NewGame();
         }
     }
 }

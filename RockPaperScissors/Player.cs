@@ -11,9 +11,9 @@ namespace RockPaperScissors
         //member vars
         public Gesture gesture;
         //constructor
-
+        
         //methods
-        public void Choice()
+        public virtual void Choice()
         {
 
         }
