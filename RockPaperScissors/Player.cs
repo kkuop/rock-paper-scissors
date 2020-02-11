@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissors
 {
-    class Player
+    public abstract class Player
     {
         //member vars
         public Gesture gesture;
+        public int score;
         //constructor
         
         //methods

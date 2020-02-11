@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissors
 {
-    class Computer : Player
+    public class Computer : Player
     {
         //member vars
 
@@ -16,5 +16,9 @@ namespace RockPaperScissors
             
         }
         //methods
+        public override void Choice()
+        {
+            //randomly determine choice
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissors
 {
-    class Gesture
+    public class Gesture
     {
         //member vars
         public List<string> listOfGestures;

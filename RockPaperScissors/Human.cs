@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissors
 {
-    class Human : Player
+    public class Human : Player
     {
         //member vars
 
@@ -16,6 +16,9 @@ namespace RockPaperScissors
 
         }
         //methods
-        
+        public override void Choice()
+        {
+            //capture user input to determine choice
+        }
     }
 }
