@@ -9,16 +9,16 @@ namespace RockPaperScissors
     public class Human : Player
     {
         //member vars
-
+        
         //constructor
         public Human()
         {
-
+            score = 0;
         }
         //methods
         public override void Choice()
         {
-            //capture user input to determine choice
+
         }
     }
 }

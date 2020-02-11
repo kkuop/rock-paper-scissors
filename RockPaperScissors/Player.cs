@@ -9,7 +9,6 @@ namespace RockPaperScissors
     public abstract class Player
     {
         //member vars
-        public Gesture gesture;
         public int score;
         //constructor
         

@@ -12,6 +12,7 @@ namespace RockPaperScissors
         {
             Game newGame = new Game();
             newGame.NewGame();
+            Console.ReadLine();
         }
     }
 }

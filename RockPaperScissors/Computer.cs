@@ -9,7 +9,7 @@ namespace RockPaperScissors
     public class Computer : Player
     {
         //member vars
-
+        
         //constructor
         public Computer()
         {

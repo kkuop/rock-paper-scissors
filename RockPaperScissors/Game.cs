@@ -8,31 +8,57 @@ namespace RockPaperScissors
 {
     public class Game
     {
-        //call a method or put logic here to get user input on whether the game should be human v human or human v computer
         public bool vsComputer = false;
         ConsoleKeyInfo userInput;
+        Player playerOne = new Human();
+        Player playerTwo;
         
         public void NewGame()
         {
+            WhichGame();
+            RunGame();
+            
+
+        }
+        public void RunGame()
+        {
+            while (playerOne.score <2 && playerTwo.score < 2)
+            {
+                playerOne.Choice();
+                if(playerOne.score == 2)
+                {
+                    break;
+                }
+                playerTwo.Choice();
+                if(playerTwo.score == 2)
+                {
+                    break;
+                }
+            }
+        }
+        public void WhichGame()
+        {
             Console.WriteLine("Welcome to Rock-Paper-Scissors-Lizard-Spock");
             Console.WriteLine("Would you like to play against the computer?\ny) Yes\nn) No");
-            userInput = Console.ReadKey();
             for (int i = 0; i < 100; i++)
             {
-            if (userInput.KeyChar == 'y')
-            {
-                vsComputer = true;
+                userInput = Console.ReadKey();
+                if (userInput.KeyChar == 'y')
+                {
+                    vsComputer = true;
+                    playerTwo = new Computer();
                     break;
-            }
-            else if (userInput.KeyChar == 'n')
-            {
-                vsComputer = false;
+                }
+                else if (userInput.KeyChar == 'n')
+                {
+                    vsComputer = false;
+                    playerTwo = new Human();
                     break;
-            }
-            else
-            {
-                Console.WriteLine("\nThat is not valid input... please try again!");
-            }
+                }
+                else
+                {
+                    Console.WriteLine("\nThat is not valid input... please try again!");
+                }
             }
         }
     }
