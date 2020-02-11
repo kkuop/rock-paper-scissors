@@ -9,11 +9,11 @@ namespace RockPaperScissors
     public class Computer : Player
     {
         //member vars
-        
+        public Gesture listOfGestures = new Gesture(new List<string> { "Rock", "Paper", "Scissors", "Lizard", "Spock" });
         //constructor
         public Computer()
         {
-            
+            score = 0;
         }
         //methods
         public override void Choice()

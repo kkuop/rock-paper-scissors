@@ -9,6 +9,7 @@ namespace RockPaperScissors
     public class Human : Player
     {
         //member vars
+        public Gesture listOfGestures = new Gesture(new List<string> {"Rock","Paper", "Scissors", "Lizard", "Spock" });
         
         //constructor
         public Human()

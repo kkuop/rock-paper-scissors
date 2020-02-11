@@ -11,9 +11,9 @@ namespace RockPaperScissors
         //member vars
         public List<string> listOfGestures;
         //constructor
-        public Gesture()
+        public Gesture(List<string> listOfGestures)
         {
-            List<string> listOfGestures = new List<string> {"Rock","Paper","Scissors","Lizard","Spock" };
+            this.listOfGestures = listOfGestures;
         }
         //methods
     }
