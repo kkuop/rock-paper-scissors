@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissors
 {
-    class Program
+    class Game
     {
-        static void Main(string[] args)
+        public void newGame()
         {
-            Game newGame = new Game();
-            newGame.newGame();
+            //logic goes here
         }
     }
 }
