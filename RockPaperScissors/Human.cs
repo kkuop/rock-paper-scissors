@@ -9,7 +9,7 @@ namespace RockPaperScissors
     public class Human : Player
     {
         //member vars
-        public Gesture listOfGestures = new Gesture(new List<string> {"Rock","Paper", "Scissors", "Lizard", "Spock" });
+        
         
         //constructor
         public Human()
@@ -17,9 +17,17 @@ namespace RockPaperScissors
             score = 0;
         }
         //methods
-        public override void Choice()
+        public override char Choice()
         {
+            ConsoleKeyInfo userInput;
+            Console.WriteLine($"\nWhat is your first choice?\na){listOfGestures.listOfGestures[0]}\nb){listOfGestures.listOfGestures[1]}\nc){listOfGestures.listOfGestures[2]}\nd){listOfGestures.listOfGestures[3]}\ne){listOfGestures.listOfGestures[4]}");
+            do
+            {
+                userInput = Console.ReadKey();
+                return userInput.KeyChar;
 
+            } while (userInput.KeyChar != 'a'||userInput.KeyChar != 'b'||userInput.KeyChar != 'c' || userInput.KeyChar != 'd' || userInput.KeyChar != 'e');
+            
         }
     }
 }

@@ -10,12 +10,13 @@ namespace RockPaperScissors
     {
         //member vars
         public int score;
+        public Gesture listOfGestures = new Gesture(new List<string> { "Rock", "Paper", "Scissors", "Lizard", "Spock" });
         //constructor
-        
-        //methods
-        public virtual void Choice()
-        {
 
+        //methods
+        public virtual char Choice()
+        {
+            return 'z';
         }
     }
 }

@@ -9,16 +9,40 @@ namespace RockPaperScissors
     public class Computer : Player
     {
         //member vars
-        public Gesture listOfGestures = new Gesture(new List<string> { "Rock", "Paper", "Scissors", "Lizard", "Spock" });
+        
         //constructor
         public Computer()
         {
             score = 0;
         }
         //methods
-        public override void Choice()
+        public override char Choice()
         {
-            //randomly determine choice
+            int randomNumber = new Random().Next(1, 50);
+            if (randomNumber <= 10)
+            {
+                return 'a';
+            }
+            else if(randomNumber >10 && randomNumber <=20)
+            {
+                return 'b';
+            }
+            else if (randomNumber >20 && randomNumber <=30)
+            {
+                return 'c';
+            }
+            else if (randomNumber >30 && randomNumber <=40)
+            {
+                return 'd';
+            }
+            else if (randomNumber >40 && randomNumber <=50)
+            {
+                return 'e';
+            }
+            else
+            {
+                return 'z';
+            }
         }
     }
 }
