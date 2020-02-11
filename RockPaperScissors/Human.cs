@@ -20,7 +20,7 @@ namespace RockPaperScissors
         public override char Choice()
         {
             ConsoleKeyInfo userInput;
-            Console.WriteLine($"\nWhat is your first choice?\na){listOfGestures.listOfGestures[0]}\nb){listOfGestures.listOfGestures[1]}\nc){listOfGestures.listOfGestures[2]}\nd){listOfGestures.listOfGestures[3]}\ne){listOfGestures.listOfGestures[4]}");
+            Console.WriteLine($"\nWhat is your choice?\na){listOfGestures.listOfGestures[0]}\nb){listOfGestures.listOfGestures[1]}\nc){listOfGestures.listOfGestures[2]}\nd){listOfGestures.listOfGestures[3]}\ne){listOfGestures.listOfGestures[4]}");
             do
             {
                 userInput = Console.ReadKey();

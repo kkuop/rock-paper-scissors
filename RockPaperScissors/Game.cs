@@ -24,64 +24,83 @@ namespace RockPaperScissors
         {
             while (playerOne.score < 2 && playerTwo.score < 2)
             {
-                playerOne.Choice();
+                char playerOneChoice = playerOne.Choice();
 
-                playerTwo.Choice();
+                char playerTwoChoice = playerTwo.Choice();
 
 
-                if ((playerOne.Choice() == 'a' && playerTwo.Choice() == 'c') || (playerOne.Choice() == 'a' && playerTwo.Choice() == 'd'))
+                if ((playerOneChoice == 'a' && playerTwoChoice == 'c') || (playerOneChoice == 'a' && playerTwoChoice == 'd'))
                 {
                     playerOne.score++;
-                    Console.WriteLine($"{playerOne.Choice()} beats {playerTwo.Choice()}");
+                    Console.WriteLine($"\n{playerOneChoice} beats {playerTwoChoice}");
+                    Console.ReadLine();
                 }
-                else if ((playerOne.Choice() == 'b' && playerTwo.Choice() == 'a') || (playerOne.Choice() == 'b' && playerTwo.Choice() == 'e'))
+                else if ((playerOneChoice == 'b' && playerTwoChoice == 'a') || (playerOneChoice == 'b' && playerTwoChoice == 'e'))
                 {
                     playerOne.score++;
-                    Console.WriteLine($"{playerOne.Choice()} beats {playerTwo.Choice()}");
+                    Console.WriteLine($"\n{playerOneChoice} beats {playerTwoChoice}");
+                    Console.ReadLine();
+
                 }
-                else if ((playerOne.Choice() == 'c' && playerTwo.Choice() == 'b') || (playerOne.Choice() == 'c' && playerTwo.Choice() == 'd'))
+                else if ((playerOneChoice == 'c' && playerTwoChoice == 'b') || (playerOneChoice == 'c' && playerTwoChoice == 'd'))
                 {
                     playerOne.score++;
-                    Console.WriteLine($"{playerOne.Choice()} beats {playerTwo.Choice()}");
+                    Console.WriteLine($"\n{playerOneChoice} beats {playerTwoChoice}");
+                    Console.ReadLine();
+
                 }
-                else if ((playerOne.Choice() == 'd' && playerTwo.Choice() == 'e') || (playerOne.Choice() == 'd' && playerTwo.Choice() == 'b'))
+                else if ((playerOneChoice == 'd' && playerTwoChoice == 'e') || (playerOneChoice == 'd' && playerTwoChoice == 'b'))
                 {
                     playerOne.score++;
-                    Console.WriteLine($"{playerOne.Choice()} beats {playerTwo.Choice()}");
+                    Console.WriteLine($"\n{playerOneChoice} beats {playerTwoChoice}");
+                    Console.ReadLine();
+
                 }
-                else if ((playerOne.Choice() == 'e' && playerTwo.Choice() == 'a') || (playerOne.Choice() == 'e' && playerTwo.Choice() == 'c'))
+                else if ((playerOneChoice == 'e' && playerTwoChoice == 'a') || (playerOneChoice == 'e' && playerTwoChoice == 'c'))
                 {
                     playerOne.score++;
-                    Console.WriteLine($"{playerOne.Choice()} beats {playerTwo.Choice()}");
+                    Console.WriteLine($"\n{playerOneChoice} beats {playerTwoChoice}");
+                    Console.ReadLine();
+
                 }
-                else if ((playerTwo.Choice() == 'a' && playerOne.Choice() == 'c') || (playerTwo.Choice() == 'a' && playerOne.Choice() == 'd')) 
+                else if ((playerTwoChoice == 'a' && playerOneChoice == 'c') || (playerTwoChoice == 'a' && playerOneChoice == 'd')) 
                 {
                     playerTwo.score++;
-                    Console.WriteLine($"{playerTwo.Choice()} beats {playerOne.Choice()}");
+                    Console.WriteLine($"\n{playerTwoChoice} beats {playerOneChoice}");
+                    Console.ReadLine();
+
                 }
-                else if ((playerTwo.Choice() == 'b' && playerOne.Choice() == 'a') || (playerTwo.Choice() == 'b' && playerOne.Choice() == 'e'))
+                else if ((playerTwoChoice == 'b' && playerOneChoice == 'a') || (playerTwoChoice == 'b' && playerOneChoice == 'e'))
                 {
                     playerTwo.score++;
-                    Console.WriteLine($"{playerTwo.Choice()} beats {playerOne.Choice()}");
+                    Console.WriteLine($"\n{playerTwoChoice} beats {playerOneChoice}");
+                    Console.ReadLine();
+
                 }
-                else if ((playerTwo.Choice() == 'c' && playerOne.Choice() == 'b') || (playerTwo.Choice() == 'c' && playerOne.Choice() == 'd'))
+                else if ((playerTwoChoice == 'c' && playerOneChoice == 'b') || (playerTwoChoice == 'c' && playerOneChoice == 'd'))
                 {
                     playerTwo.score++;
-                    Console.WriteLine($"{playerTwo.Choice()} beats {playerOne.Choice()}");
+                    Console.WriteLine($"\n{playerTwoChoice} beats {playerOneChoice}");
+                    Console.ReadLine();
+
                 }
-                else if ((playerTwo.Choice() == 'd' && playerOne.Choice() == 'e') || (playerTwo.Choice() == 'd' && playerOne.Choice() == 'b'))
+                else if ((playerTwoChoice == 'd' && playerOneChoice == 'e') || (playerTwoChoice == 'd' && playerOneChoice == 'b'))
                 {
                     playerTwo.score++;
-                    Console.WriteLine($"{playerTwo.Choice()} beats {playerOne.Choice()}");
+                    Console.WriteLine($"\n{playerTwoChoice} beats {playerOneChoice}");
+                    Console.ReadLine();
+
                 }
-                else if ((playerTwo.Choice() == 'e' && playerOne.Choice() == 'a') || (playerTwo.Choice() == 'e' && playerOne.Choice() == 'c'))
+                else if ((playerTwoChoice == 'e' && playerOneChoice == 'a') || (playerTwoChoice == 'e' && playerOneChoice == 'c'))
                 {
                     playerTwo.score++;
-                    Console.WriteLine($"{playerTwo.Choice()} beats {playerOne.Choice()}");
+                    Console.WriteLine($"\n{playerTwoChoice} beats {playerOneChoice}");
+                    Console.ReadLine();
+
                 }
                 else
                 {
-                    Console.WriteLine("Something went wrong...");
+                    Console.WriteLine("\nSomething went wrong...");
                 }
             }
         }
