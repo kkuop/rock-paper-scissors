@@ -101,7 +101,77 @@ namespace RockPaperScissors
                     }
                     Console.WriteLine($"\nThe score is:\nPlayer 1: {playerOne.score}\nPlayer 2: {playerTwo.score}");
 
-                }                
+                }
+                else if ((playerTwoChoice == 'a' && playerOneChoice == 'c') || (playerTwoChoice == 'a' && playerOneChoice == 'd')) 
+                {
+                    playerTwo.score++;
+                    if (playerTwoChoice == 'c')
+                    {
+                        Console.WriteLine("Rock beats Scissors!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Rock beats Lizard!");
+                    }
+                    Console.WriteLine($"\nThe score is:\nPlayer 1: {playerOne.score}\nPlayer 2: {playerTwo.score}");
+
+                }
+                else if ((playerTwoChoice == 'b' && playerOneChoice == 'a') || (playerTwoChoice == 'b' && playerOneChoice == 'e'))
+                {
+                    playerTwo.score++;
+                    if (playerTwoChoice == 'c')
+                    {
+                        Console.WriteLine("Rock beats Scissors!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Rock beats Lizard!");
+                    }
+                    Console.WriteLine($"\nThe score is:\nPlayer 1: {playerOne.score}\nPlayer 2: {playerTwo.score}");
+
+                }
+                else if ((playerTwoChoice == 'c' && playerOneChoice == 'b') || (playerTwoChoice == 'c' && playerOneChoice == 'd'))
+                {
+                    playerTwo.score++;
+                    if (playerTwoChoice == 'c')
+                    {
+                        Console.WriteLine("Rock beats Scissors!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Rock beats Lizard!");
+                    }
+                    Console.WriteLine($"\nThe score is:\nPlayer 1: {playerOne.score}\nPlayer 2: {playerTwo.score}");
+
+                }
+                else if ((playerTwoChoice == 'd' && playerOneChoice == 'e') || (playerTwoChoice == 'd' && playerOneChoice == 'b'))
+                {
+                    playerTwo.score++;
+                    if (playerTwoChoice == 'c')
+                    {
+                        Console.WriteLine("Rock beats Scissors!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Rock beats Lizard!");
+                    }
+                    Console.WriteLine($"\nThe score is:\nPlayer 1: {playerOne.score}\nPlayer 2: {playerTwo.score}");
+
+                }
+                else if ((playerTwoChoice == 'e' && playerOneChoice == 'a') || (playerTwoChoice == 'e' && playerOneChoice == 'c'))
+                {
+                    playerTwo.score++;
+                    if (playerTwoChoice == 'c')
+                    {
+                        Console.WriteLine("Rock beats Scissors!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Rock beats Lizard!");
+                    }
+                    Console.WriteLine($"\nThe score is:\nPlayer 1: {playerOne.score}\nPlayer 2: {playerTwo.score}");
+
+                }
                 else
                 {
                     Console.WriteLine("\nI don't have a rule for that yet...");
