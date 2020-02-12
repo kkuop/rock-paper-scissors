@@ -11,6 +11,8 @@ namespace RockPaperScissors
         ConsoleKeyInfo userInput;
         Player playerOne = new Human();
         Player playerTwo;
+        int bestOf = 3;
+        bool vsComputer = false;
         
         public void NewGame()
         {
@@ -21,13 +23,17 @@ namespace RockPaperScissors
         }
         public void RunGame()
         {
-            while (playerOne.score < 3 && playerTwo.score < 3)
+            while (playerOne.score < bestOf && playerTwo.score < bestOf)
             {
                 Console.WriteLine("\n\nPlayer 1:");
                 char playerOneChoice = playerOne.Choice();
                 Console.WriteLine("\n\nPlayer 2:");
                 char playerTwoChoice = playerTwo.Choice();
                 Console.WriteLine("");
+                if (vsComputer == true)
+                {                    
+                    Console.WriteLine($"The computer picks {playerTwoChoice}");
+                }
 
                 if (playerOneChoice == playerTwoChoice)
                 {
@@ -182,18 +188,20 @@ namespace RockPaperScissors
         public void WhichGame()
         {
             Console.WriteLine("Welcome to Rock-Paper-Scissors-Lizard-Spock");
-            Console.WriteLine("The game will be a best of 3...");
+            Console.WriteLine($"\nThe game will be a best of {bestOf}...");
             Console.WriteLine("\nWould you like to play against the computer?\ny) Yes\nn) No");
             for (int i = 0; i < 10; i++)
             {
                 userInput = Console.ReadKey();
                 if (userInput.KeyChar == 'y')
                 {
+                    vsComputer = true;
                     playerTwo = new Computer();
                     break;
                 }
                 else if (userInput.KeyChar == 'n')
                 {
+                    vsComputer = false;
                     playerTwo = new Human();
                     break;
                 }else if (i==9)
