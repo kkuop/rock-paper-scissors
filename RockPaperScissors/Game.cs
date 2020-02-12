@@ -101,7 +101,7 @@ namespace RockPaperScissors
                 }
                 else
                 {
-                    Console.WriteLine("\nSomething went wrong...");
+                    Console.WriteLine("\nI don't have a rule for that yet...");
                 }
             }
         }
