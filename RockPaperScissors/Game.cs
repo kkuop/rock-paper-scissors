@@ -27,6 +27,7 @@ namespace RockPaperScissors
                 char playerOneChoice = playerOne.Choice();
                 Console.WriteLine("\n\nPlayer 2:");
                 char playerTwoChoice = playerTwo.Choice();
+                Console.WriteLine("");
 
                 if (playerOneChoice == playerTwoChoice)
                 {
@@ -210,7 +211,7 @@ namespace RockPaperScissors
 
         public void DetermineWinner()
         {
-            if (playerOne.score ==2)
+            if (playerOne.score > playerTwo.score)
             {
                 Console.WriteLine("Player 1 is the winner!");
             }
