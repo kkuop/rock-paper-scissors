@@ -24,8 +24,9 @@ namespace RockPaperScissors
         {
             while (playerOne.score < 2 && playerTwo.score < 2)
             {
+                Console.WriteLine("\n\nPlayer 1:");
                 char playerOneChoice = playerOne.Choice();
-
+                Console.WriteLine("\n\nPlayer 2:");
                 char playerTwoChoice = playerTwo.Choice();
 
 
@@ -33,69 +34,69 @@ namespace RockPaperScissors
                 {
                     playerOne.score++;
                     Console.WriteLine($"\n{playerOneChoice} beats {playerTwoChoice}");
-                    Console.ReadLine();
+                    
                 }
                 else if ((playerOneChoice == 'b' && playerTwoChoice == 'a') || (playerOneChoice == 'b' && playerTwoChoice == 'e'))
                 {
                     playerOne.score++;
                     Console.WriteLine($"\n{playerOneChoice} beats {playerTwoChoice}");
-                    Console.ReadLine();
+                    
 
                 }
                 else if ((playerOneChoice == 'c' && playerTwoChoice == 'b') || (playerOneChoice == 'c' && playerTwoChoice == 'd'))
                 {
                     playerOne.score++;
                     Console.WriteLine($"\n{playerOneChoice} beats {playerTwoChoice}");
-                    Console.ReadLine();
+                    
 
                 }
                 else if ((playerOneChoice == 'd' && playerTwoChoice == 'e') || (playerOneChoice == 'd' && playerTwoChoice == 'b'))
                 {
                     playerOne.score++;
                     Console.WriteLine($"\n{playerOneChoice} beats {playerTwoChoice}");
-                    Console.ReadLine();
+                    
 
                 }
                 else if ((playerOneChoice == 'e' && playerTwoChoice == 'a') || (playerOneChoice == 'e' && playerTwoChoice == 'c'))
                 {
                     playerOne.score++;
                     Console.WriteLine($"\n{playerOneChoice} beats {playerTwoChoice}");
-                    Console.ReadLine();
+                    
 
                 }
                 else if ((playerTwoChoice == 'a' && playerOneChoice == 'c') || (playerTwoChoice == 'a' && playerOneChoice == 'd')) 
                 {
                     playerTwo.score++;
                     Console.WriteLine($"\n{playerTwoChoice} beats {playerOneChoice}");
-                    Console.ReadLine();
+                    
 
                 }
                 else if ((playerTwoChoice == 'b' && playerOneChoice == 'a') || (playerTwoChoice == 'b' && playerOneChoice == 'e'))
                 {
                     playerTwo.score++;
                     Console.WriteLine($"\n{playerTwoChoice} beats {playerOneChoice}");
-                    Console.ReadLine();
+                    
 
                 }
                 else if ((playerTwoChoice == 'c' && playerOneChoice == 'b') || (playerTwoChoice == 'c' && playerOneChoice == 'd'))
                 {
                     playerTwo.score++;
                     Console.WriteLine($"\n{playerTwoChoice} beats {playerOneChoice}");
-                    Console.ReadLine();
+                    
 
                 }
                 else if ((playerTwoChoice == 'd' && playerOneChoice == 'e') || (playerTwoChoice == 'd' && playerOneChoice == 'b'))
                 {
                     playerTwo.score++;
                     Console.WriteLine($"\n{playerTwoChoice} beats {playerOneChoice}");
-                    Console.ReadLine();
+                    
 
                 }
                 else if ((playerTwoChoice == 'e' && playerOneChoice == 'a') || (playerTwoChoice == 'e' && playerOneChoice == 'c'))
                 {
                     playerTwo.score++;
                     Console.WriteLine($"\n{playerTwoChoice} beats {playerOneChoice}");
-                    Console.ReadLine();
+                    
 
                 }
                 else
