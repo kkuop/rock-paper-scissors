@@ -8,7 +8,6 @@ namespace RockPaperScissors
 {
     public class Game
     {
-        public bool vsComputer = false;
         ConsoleKeyInfo userInput;
         Player playerOne = new Human();
         Player playerTwo;
@@ -114,13 +113,11 @@ namespace RockPaperScissors
                 userInput = Console.ReadKey();
                 if (userInput.KeyChar == 'y')
                 {
-                    vsComputer = true;
                     playerTwo = new Computer();
                     break;
                 }
                 else if (userInput.KeyChar == 'n')
                 {
-                    vsComputer = false;
                     playerTwo = new Human();
                     break;
                 }
