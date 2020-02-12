@@ -11,17 +11,55 @@ namespace RockPaperScissors
         ConsoleKeyInfo userInput;
         Player playerOne = new Human();
         Player playerTwo;
+        int bestOf;
         int firstToWins = 3;
         bool vsComputer = false;
         
         public void NewGame()
         {
+            BestOf();
             WhichGame();
             RunGame();
             DetermineWinner();
 
         }
-        public void RunGame()
+        private void BestOf()
+        {
+
+        }
+        private void WhichGame()
+        {
+            Console.WriteLine("Welcome to Rock-Paper-Scissors-Lizard-Spock");
+            Console.WriteLine($"\nThe game will be a best of {firstToWins}...");
+            Console.WriteLine("\nChoose a game mode:\na) Human vs Computer\nb) Human vs Human");
+            for (int i = 0; i < 10; i++)
+            {
+                userInput = Console.ReadKey();
+                if (userInput.KeyChar == 'a')
+                {
+                    vsComputer = true;
+                    playerTwo = new Computer();
+                    break;
+                }
+                else if (userInput.KeyChar == 'b')
+                {
+                    vsComputer = false;
+                    playerTwo = new Human();
+                    break;
+                }
+                else if (i == 9)
+                {
+                    Console.WriteLine("\n\nAt this point I'm going to assume you are a child and close the application...");
+                    Console.ReadKey();
+                    Environment.Exit(0);
+                }
+                else
+                {
+                    Console.WriteLine("\nThat is not an option... try again!");
+                }
+            }
+        }
+        private void RunGame()
         {
             while (playerOne.score < firstToWins && playerTwo.score < firstToWins)
             {
@@ -185,39 +223,9 @@ namespace RockPaperScissors
                 }
             }
         }
-        public void WhichGame()
-        {
-            Console.WriteLine("Welcome to Rock-Paper-Scissors-Lizard-Spock");
-            Console.WriteLine($"\nThe game will be a best of {firstToWins}...");
-            Console.WriteLine("\nChoose a game mode:\na) Human vs Computer\nb) Human vs Human");
-            for (int i = 0; i < 10; i++)
-            {
-                userInput = Console.ReadKey();
-                if (userInput.KeyChar == 'a')
-                {
-                    vsComputer = true;
-                    playerTwo = new Computer();
-                    break;
-                }
-                else if (userInput.KeyChar == 'b')
-                {
-                    vsComputer = false;
-                    playerTwo = new Human();
-                    break;
-                }else if (i==9)
-                {
-                    Console.WriteLine("\n\nAt this point I'm going to assume you are a child and close the application...");
-                    Console.ReadKey();
-                    Environment.Exit(0);
-                }
-                else
-                {
-                    Console.WriteLine("\nThat is not an option... try again!");
-                }
-            }
-        }
+        
 
-        public void DetermineWinner()
+        private void DetermineWinner()
         {
             if (playerOne.score > playerTwo.score)
             {
