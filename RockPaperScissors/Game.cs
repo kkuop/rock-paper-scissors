@@ -21,7 +21,7 @@ namespace RockPaperScissors
         }
         public void RunGame()
         {
-            while (playerOne.score < 2 && playerTwo.score < 2)
+            while (playerOne.score < 3 && playerTwo.score < 3)
             {
                 Console.WriteLine("\n\nPlayer 1:");
                 char playerOneChoice = playerOne.Choice();
@@ -105,7 +105,7 @@ namespace RockPaperScissors
                 else if ((playerTwoChoice == 'a' && playerOneChoice == 'c') || (playerTwoChoice == 'a' && playerOneChoice == 'd')) 
                 {
                     playerTwo.score++;
-                    if (playerTwoChoice == 'c')
+                    if (playerOneChoice == 'c')
                     {
                         Console.WriteLine("Rock beats Scissors!");
                     }
@@ -119,13 +119,13 @@ namespace RockPaperScissors
                 else if ((playerTwoChoice == 'b' && playerOneChoice == 'a') || (playerTwoChoice == 'b' && playerOneChoice == 'e'))
                 {
                     playerTwo.score++;
-                    if (playerTwoChoice == 'c')
+                    if (playerOneChoice == 'a')
                     {
-                        Console.WriteLine("Rock beats Scissors!");
+                        Console.WriteLine("Paper beats Rock!");
                     }
                     else
                     {
-                        Console.WriteLine("Rock beats Lizard!");
+                        Console.WriteLine("Paper beats Spock!");
                     }
                     Console.WriteLine($"\nThe score is:\nPlayer 1: {playerOne.score}\nPlayer 2: {playerTwo.score}");
 
@@ -133,13 +133,13 @@ namespace RockPaperScissors
                 else if ((playerTwoChoice == 'c' && playerOneChoice == 'b') || (playerTwoChoice == 'c' && playerOneChoice == 'd'))
                 {
                     playerTwo.score++;
-                    if (playerTwoChoice == 'c')
+                    if (playerOneChoice == 'b')
                     {
-                        Console.WriteLine("Rock beats Scissors!");
+                        Console.WriteLine("Scissors beats Paper!");
                     }
                     else
                     {
-                        Console.WriteLine("Rock beats Lizard!");
+                        Console.WriteLine("Scissors beats Lizard!");
                     }
                     Console.WriteLine($"\nThe score is:\nPlayer 1: {playerOne.score}\nPlayer 2: {playerTwo.score}");
 
@@ -147,13 +147,13 @@ namespace RockPaperScissors
                 else if ((playerTwoChoice == 'd' && playerOneChoice == 'e') || (playerTwoChoice == 'd' && playerOneChoice == 'b'))
                 {
                     playerTwo.score++;
-                    if (playerTwoChoice == 'c')
+                    if (playerOneChoice == 'e')
                     {
-                        Console.WriteLine("Rock beats Scissors!");
+                        Console.WriteLine("Lizard beats Spock!");
                     }
                     else
                     {
-                        Console.WriteLine("Rock beats Lizard!");
+                        Console.WriteLine("Lizard beats Paper!");
                     }
                     Console.WriteLine($"\nThe score is:\nPlayer 1: {playerOne.score}\nPlayer 2: {playerTwo.score}");
 
@@ -161,13 +161,13 @@ namespace RockPaperScissors
                 else if ((playerTwoChoice == 'e' && playerOneChoice == 'a') || (playerTwoChoice == 'e' && playerOneChoice == 'c'))
                 {
                     playerTwo.score++;
-                    if (playerTwoChoice == 'c')
+                    if (playerOneChoice == 'a')
                     {
-                        Console.WriteLine("Rock beats Scissors!");
+                        Console.WriteLine("Spock beats Rock!");
                     }
                     else
                     {
-                        Console.WriteLine("Rock beats Lizard!");
+                        Console.WriteLine("Spock beats Scissors!");
                     }
                     Console.WriteLine($"\nThe score is:\nPlayer 1: {playerOne.score}\nPlayer 2: {playerTwo.score}");
 
@@ -181,8 +181,9 @@ namespace RockPaperScissors
         public void WhichGame()
         {
             Console.WriteLine("Welcome to Rock-Paper-Scissors-Lizard-Spock");
-            Console.WriteLine("Would you like to play against the computer?\ny) Yes\nn) No");
-            for (int i = 0; i < 100; i++)
+            Console.WriteLine("The game will be a best of 3...");
+            Console.WriteLine("\nWould you like to play against the computer?\ny) Yes\nn) No");
+            for (int i = 0; i < 10; i++)
             {
                 userInput = Console.ReadKey();
                 if (userInput.KeyChar == 'y')
@@ -194,10 +195,15 @@ namespace RockPaperScissors
                 {
                     playerTwo = new Human();
                     break;
+                }else if (i==9)
+                {
+                    Console.WriteLine("\n\nAt this point I'm going to assume you are a child and close the application...");
+                    Console.ReadKey();
+                    Environment.Exit(0);
                 }
                 else
                 {
-                    Console.WriteLine("\nThat is not valid input... please try again!");
+                    Console.WriteLine("\nThat is not an option... try again!");
                 }
             }
         }
