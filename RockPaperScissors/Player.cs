@@ -14,9 +14,6 @@ namespace RockPaperScissors
         //constructor
 
         //methods
-        public virtual char Choice()
-        {
-            return 'z';
-        }
+        public abstract char Choice();
     }
 }
