@@ -12,11 +12,12 @@ namespace RockPaperScissors
         Player playerOne = new Human();
         Player playerTwo;
         int bestOf;
-        int firstToWins = 3;
+        int firstToWins;
         bool vsComputer = false;
         
         public void NewGame()
         {
+            Console.WriteLine("Welcome to Rock-Paper-Scissors-Lizard-Spock");
             BestOf();
             WhichGame();
             RunGame();
@@ -25,12 +26,33 @@ namespace RockPaperScissors
         }
         private void BestOf()
         {
-
+            Console.WriteLine("Enter a number to play 'Best of'");
+            for (int i = 0; i < 10; i++)
+            {
+                bestOf = Convert.ToInt32(Console.ReadLine());
+                if (i == 9)
+                {
+                    Console.WriteLine("\n\nAt this point I'm going to assume you are a child and close the application...");
+                    Console.ReadKey();
+                    Environment.Exit(0);
+                    
+                }
+                else if (bestOf % 2 == 0) 
+                {
+                    Console.WriteLine("Please enter an odd number!");
+                }
+                else
+                {
+                    firstToWins = (bestOf / 2) + 1;
+                    break;
+                }
+            }
+            
         }
         private void WhichGame()
         {
-            Console.WriteLine("Welcome to Rock-Paper-Scissors-Lizard-Spock");
-            Console.WriteLine($"\nThe game will be a best of {firstToWins}...");
+            
+            Console.WriteLine($"\nThe game will be a best of {bestOf}...");
             Console.WriteLine("\nChoose a game mode:\na) Human vs Computer\nb) Human vs Human");
             for (int i = 0; i < 10; i++)
             {
