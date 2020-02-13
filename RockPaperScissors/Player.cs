@@ -10,10 +10,22 @@ namespace RockPaperScissors
     {
         //member vars
         public int score;
-        public Gesture listOfGestures = new Gesture(new List<string> { "Rock", "Paper", "Scissors", "Lizard", "Spock" });
+        public Gesture rock;
+        public Gesture paper ;
+        public Gesture scissors ;
+        public Gesture lizard ;
+        public Gesture spock ;
         //constructor
-
+        public Player()
+        {
+            rock = new Gesture("Rock", new List<string> { "Paper", "Spock" });
+            paper = new Gesture("Paper", new List<string> { "Scissors", "Lizard" });
+            scissors = new Gesture("Scissors", new List<string> { "Rock", "Spock" });
+            lizard = new Gesture("Lizard", new List<string> { "Rock", "Scissors" });
+            spock = new Gesture("Spock", new List<string> { "Paper", "Lizard" });
+            new List<Gesture> { rock, paper, scissors, lizard, spock };
+        }
         //methods
-        public abstract char Choice();
+        public abstract Gesture Choice();
     }
 }

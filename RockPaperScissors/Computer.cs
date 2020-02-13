@@ -16,33 +16,30 @@ namespace RockPaperScissors
             score = 0;
         }
         //methods
-        public override char Choice()
+        public override Gesture Choice()
         {
             int randomNumber = new Random().Next(1, 50);
             if (randomNumber <= 10)
             {
-                return 'a';
+                return this.rock;
             }
             else if(randomNumber >10 && randomNumber <=20)
             {
-                return 'b';
+                return this.paper;
             }
             else if (randomNumber >20 && randomNumber <=30)
             {
-                return 'c';
+                return this.scissors;
             }
             else if (randomNumber >30 && randomNumber <=40)
             {
-                return 'd';
+                return this.lizard;
             }
-            else if (randomNumber >40 && randomNumber <=50)
+            else 
             {
-                return 'e';
+                return this.spock;
             }
-            else
-            {
-                return 'z';
-            }
+            
         }
     }
 }

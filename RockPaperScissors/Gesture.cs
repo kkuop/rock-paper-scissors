@@ -9,11 +9,13 @@ namespace RockPaperScissors
     public class Gesture
     {
         //member vars
-        public List<string> listOfGestures;
+        public string type;
+        public List<string> losesTo;
         //constructor
-        public Gesture(List<string> listOfGestures)
+        public Gesture(string type, List<string> losesTo)
         {
-            this.listOfGestures = listOfGestures;
+            this.type = type;
+            this.losesTo = losesTo;
         }
         //methods
     }
