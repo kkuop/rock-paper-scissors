@@ -8,12 +8,18 @@ namespace RockPaperScissors
 {
     public class Game
     {
+        Player playerOne;
         ConsoleKeyInfo userInput;
-        Player playerOne = new Human();
         Player playerTwo;
         int bestOf;
         int firstToWins;
-        bool vsComputer = false;
+        bool vsComputer;
+        
+        public Game()
+        {
+            playerOne = new Human();
+            vsComputer = false;
+        }
         
         public void NewGame()
         {
@@ -29,7 +35,15 @@ namespace RockPaperScissors
             Console.WriteLine("Enter a number to play 'Best of'");
             for (int i = 0; i < 10; i++)
             {
-                bestOf = Convert.ToInt32(Console.ReadLine());
+                try
+                {
+                    bestOf = Convert.ToInt32(Console.ReadLine());
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("That was not a number... try again!");
+                    BestOf();
+                }
                 if (i == 9)
                 {
                     Console.WriteLine("\n\nAt this point I'm going to assume you are a child and close the application...");
