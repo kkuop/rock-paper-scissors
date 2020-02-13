@@ -15,6 +15,7 @@ namespace RockPaperScissors
         public Gesture scissors ;
         public Gesture lizard ;
         public Gesture spock ;
+        public List<Gesture> gestures;
         //constructor
         public Player()
         {
@@ -23,7 +24,7 @@ namespace RockPaperScissors
             scissors = new Gesture("Scissors", new List<string> { "Rock", "Spock" });
             lizard = new Gesture("Lizard", new List<string> { "Rock", "Scissors" });
             spock = new Gesture("Spock", new List<string> { "Paper", "Lizard" });
-            new List<Gesture> { rock, paper, scissors, lizard, spock };
+            gestures = new List<Gesture> { rock, paper, scissors, lizard, spock };
         }
         //methods
         public abstract Gesture Choice();
